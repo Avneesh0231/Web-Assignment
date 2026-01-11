@@ -1,0 +1,579 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+#menu-toggle {
+    display: none;
+}
+.hamburger {
+    display: none;
+}
+
+
+/* ye css part navbar ke liye hi sara kuch karunga */
+.navbar{
+    display:flex;
+
+    align-items:center;
+    padding:12px 28px;
+    background:linear-gradient(to right,#0f171e,#000);
+}
+
+.left-nav{
+    display:flex;
+    align-items:center;
+    gap: 24px;
+}
+.hamburger-wrapper {
+  display: flex;
+  align-items: center;
+}
+.logo{
+    width:90px;
+}
+
+.nav-center{
+    display:flex;
+    gap:20px;
+}
+
+.nav-link{
+    color:white;
+    text-decoration:none;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:15px;
+}
+.nav-link.active{
+    background-color: #1f2937;
+}
+
+.nav-link:hover,
+.nav-link.active{
+    background: whitesmoke;
+    cursor: pointer;
+    color: black;
+}
+
+.navbar-icons{
+    display: flex;
+    gap:18px;
+    margin-left: auto;
+}
+
+.icon{
+    width:22px;
+    filter:invert(100%);
+}
+
+/* ye jo scroll menu add hai hero banner mai */
+.hero-scroll{
+    display:flex;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    scroll-behavior:smooth;
+}
+
+.hero-scroll::-webkit-scrollbar{
+    display:none;
+}
+
+/* ye hero banner ke liye edited hai */
+.hero{
+    min-width:100vw;
+    height:72vh;
+
+    background-repeat:no-repeat;
+    background-size:contain;          
+    background-position:center;
+    background-color:#0f171e;
+
+    display:flex;                     
+    align-items:flex-end;
+
+    scroll-snap-align:start;
+}
+
+/* yaha par hero ke liye image added hai  */
+.hero-1{
+    background-image:url("https://tva.onscreenasia.com/wp-content/uploads/2025/11/Poster-2-The-Family-Man-S3-Trailer-Launch-Nov-7.jpg");
+}
+.hero-2{
+    background-image:url("paatal.jpg");
+}
+.hero-3{
+    background-image:url("https://wallpapercat.com/w/full/e/c/6/132554-1920x1080-desktop-full-hd-harry-potter-background-photo.jpg");
+}
+.hero-4{
+     background-image:url("https://imgs.search.brave.com/aNgLEC7PIFEDNPk4NkmLKqIiJU1OoALnT8t5gAN66Hw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXQuY29t/L3cvZnVsbC8xLzgv/OC8xMjQxNTEtMTky/MHgxMDgwLWRlc2t0/b3AtZnVsbC1oZC1z/dHJhbmdlci10aGlu/Z3MtYmFja2dyb3Vu/ZC1pbWFnZS5qcGc");
+}
+
+/* ye hero banner ke upar jo buttons or texts aa rahe hain vo sab hai yahan par */
+.hero-overlay{
+    width:100%;
+    max-width:45%;
+    padding:40px 60px;
+    color:white;
+
+    background:linear-gradient(
+        to right,
+        rgba(15,23,30,0.95),
+        rgba(15,23,30,0.65),
+        rgba(15,23,30,0.30),
+        transparent
+    );
+}
+
+.hero-overlay h1{
+    font-size:42px;
+    margin-bottom:12px;
+}
+
+.hero-overlay p{
+    font-size:15px;
+    line-height:1.6;
+    margin-bottom:18px;
+}
+
+/* ye kaam button ke liye hai  */
+.hero-buttons{
+    display:flex;
+    gap:14px;
+}
+
+.hero-buttons button{
+    padding:12px 26px;
+    font-size:15px;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+}
+
+.primary{
+    background:white;
+    color:black;
+    font-weight:600;
+}
+
+.secondary{
+    background:rgba(255,255,255,0.25);
+    color:white;
+}
+
+/* yahan se responsive hoga jo mobile view mai added dikhega  */
+@media(max-width:768px){
+
+    .nav-center{
+        display:none;
+    }
+
+    .hero{
+        height:48vh;
+    }
+
+    .hero-overlay{
+        max-width:100%;
+        padding:14px 16px;
+        background:linear-gradient(
+            to top,
+            rgba(15,23,30,0.95),
+            rgba(15,23,30,0.6),
+            transparent
+        );
+    }
+
+    .hero-overlay h1{
+        font-size:24px;
+    }
+
+    .hero-overlay p{
+        font-size:13px;
+    }
+
+    .hero-buttons button{
+        padding:8px 14px;
+        font-size:13px;
+    }
+}
+/* ye sab movie vala part rahega  */
+
+.movies-section{
+    background:#0f171e;
+    padding:28px;
+    color:white;
+}
+
+.section-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:18px;
+}
+
+.section-header h2{
+    font-size:20px;
+}
+
+.show-more{
+    background:#1f2937;
+    color:white;
+    border:none;
+    padding:8px 16px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.movie-row{
+    display:flex;
+    gap:16px;
+    overflow-x:auto;
+    padding-bottom:10px;
+}
+
+.movie-row::-webkit-scrollbar{
+    display:none;
+}
+
+.movie-card{
+    min-width:180px;
+    background:#111827;
+    border-radius:8px;
+    overflow:hidden;
+    flex-shrink:0;
+}
+
+.movie-card img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+}
+
+.movie-card span{
+    display:block;
+    padding:8px;
+    font-size:14px;
+}
+
+/* fir bhule hue part yaad aa gaye unke liye naya mobile ka media use kar ke part likha yahan par  */
+
+@media(max-width:768px){
+
+    .section-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+    }
+
+    .movie-row{
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+        overflow:visible;
+    }
+
+    .movie-card{
+        min-width:unset;
+    }
+
+    .movie-card img{
+        height:200px;
+    }
+}
+/* ab ye sara jo niche about or baki sab hai unke liye css hoga yahan par  */
+
+.amazon-footer {
+  background: #232f3e;
+  color: #ddd;
+  font-size: 14px;
+}
+
+/* back to top */
+.footer-top {
+  background: #37475a;
+  text-align: center;
+  padding: 12px;
+}
+.footer-top a {
+  color: white;
+  text-decoration: none;
+}
+
+/* main 4 columns */
+.footer-main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding: 40px 60px;
+}
+.footer-main h4 {
+  color: white;
+  margin-bottom: 10px;
+}
+.footer-main a {
+  display: block;
+  margin: 6px 0;
+  font-size: 13px;
+  cursor: pointer;
+}
+.footer-main a:hover {
+  text-decoration: underline;
+}
+
+/* language bar */
+.footer-lang {
+  border-top: 1px solid #3a4553;
+  padding: 25px;
+  text-align: center;
+}
+.footer-lang .logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+}
+.footer-lang button {
+  background: transparent;
+  border: 1px solid #848688;
+  color: white;
+  padding: 6px 10px;
+  margin: 5px;
+}
+:hover.footer-lang .logo, .footer-lang button:hover {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* services grid */
+.footer-services {
+  background: #131a22;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 30px;
+  padding: 40px 80px;
+  font-size: 12px;
+}
+.footer-services div b {
+  display: block;
+  color: white;
+}
+.footer-services div span {
+  color: #aaa;
+}
+
+/* bottom */
+.footer-bottom {
+  background: #131a22;
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+  .footer-services {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-services {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+  }
+}
+.lang-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.lang-btn {
+  background: transparent;
+  border: 1px solid #848688;
+  color: white;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+/* dropdown hidden by default */
+.lang-menu {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: white;
+  color: #111;
+  width: 220px;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+  z-index: 1000;
+}
+
+/* show on hover */
+.lang-dropdown:hover .lang-menu {
+  display: block;
+}
+
+.lang-menu label {
+  display: block;
+  padding: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.lang-menu label:hover {
+  background: #f3f3f3;
+}
+
+.lang-menu input {
+  margin-right: 8px;
+}
+
+ /* movie vale jo card banaya hun unka hover add karna bhul gaya tha vo edhar hoga  */
+
+.movie-card{
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover{
+    transform:scale(1.08);
+    box-shadow:0 10px 30px rgba(0,0,0,0.6);
+    z-index:5;
+}
+
+.movie-card span{
+    transition:background 0.3s ease;
+}
+
+.movie-card:hover span{
+    background:#000;
+}
+/* ye button ka hover hai yahan par  */
+
+.primary:hover{
+    background:#000;
+    color:#fff;
+}
+
+.secondary:hover{
+    background:#000;
+}
+@media(max-width:768px){
+    .footer-links{
+        gap:12px;
+    }
+}
+/* trending mai thoding si change hai halka edit  */  
+
+.movies-section:nth-of-type(2) {
+    background:#0b1117;
+}
+/* ye navbar ke liye mobile view mai hamburger menu add karne ke liye  */
+@media(max-width:768px){
+    .nav-center{
+        transition: 
+  opacity 0.3s ease,
+  transform 0.3s ease;
+
+        display:none;
+    }
+    .hamburger-wrapper {
+    flex: 1;
+    justify-content: center;
+    position: relative;
+  }
+#menu-toggle {
+    display: none;
+}
+ .hamburger {
+    display: block;
+    font-size: 2rem;
+    color: #eee;
+    cursor: pointer;
+  }
+
+  .nav-center {
+    position: absolute;
+    top: 42px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    width: 220px;
+    background: #2b2b2b;
+    border-radius: 10px;
+    padding: 10px 0;
+
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 9999;
+  }
+
+  #menu-toggle:checked + .hamburger + .nav-center {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+  }
+}
+.nav-link {
+  transition: 
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.15s ease;
+}
+
+.nav-link:hover {
+  transform: translateY(-1px);
+}
+.hamburger {
+  transition: transform 0.3s ease;
+}
+
+#menu-toggle:checked + .hamburger {
+  transform: rotate(90deg);
+}
+.hero-buttons button {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.hero-buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.4);
+}
+.movie-card img {
+  transition: filter 0.25s ease;
+}
+
+.movie-card:hover img {
+  filter: brightness(1.08);
+}
+.hero-scroll {
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.hero {
+  scroll-snap-align: center;
+}
+.navbar-icons :hover {
+    cursor: pointer;
+  transform: scale(1.1);
+
+
+}
