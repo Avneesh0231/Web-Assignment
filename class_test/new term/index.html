@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Restaurant Website</title>
+<style>
+body{font-family:Arial; margin:0;}
+nav{background:black; color:white; padding:10px;}
+nav a{color:white; margin:10px; text-decoration:none;}
+section{padding:40px;}
+.gallery img{width:30%;}
+footer{background:black; color:white; text-align:center; padding:10px;}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <b>LA MAISON</b>
+    <a href="#home">Home</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#menu">Menu</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+    <h1>LA MAISON</h1>
+    <p>Fine Dining Restaurant</p>
+    <button>Reserve Table</button>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+        <img src="food1.jpg">
+        <img src="food2.jpg">
+        <img src="food3.jpg">
+    </div>
+</section>
+
+<!-- MENU (Nested List) -->
+<section id="menu">
+<h2>Our Menu</h2>
+
+<ol>
+<li>Starters
+    <ul>
+        <li>Soup - ₹300</li>
+        <li>Paneer Tikka - ₹400</li>
+    </ul>
+</li>
+
+<li>Main Course
+    <ul>
+        <li>Butter Chicken - ₹650</li>
+        <li>Palak Paneer - ₹520</li>
+    </ul>
+</li>
+
+<li>Desserts
+    <ul>
+        <li>Ice Cream - ₹200</li>
+        <li>Gulab Jamun - ₹250</li>
+    </ul>
+</li>
+</ol>
+
+</section>
+
+<!-- RESERVATION -->
+<section id="contact">
+<h2>Reserve Your Table</h2>
+<a href="#">Book Now</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<p>LA MAISON | New Delhi</p>
+<p>© 2026 All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
